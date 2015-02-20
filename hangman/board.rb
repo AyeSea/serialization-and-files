@@ -1,5 +1,5 @@
 class Board
-	attr_reader :display_word, :incorrect_words, :secret_word, :dictionary, :letter, :updated_or_repeat
+	attr_accessor :display_word, :incorrect_words, :secret_word, :dictionary, :letter, :updated_or_repeat
 
 	def initialize
 		open_dictionary
@@ -14,7 +14,7 @@ class Board
 		@display_word.each do |letter_cell|
 			print "#{letter_cell} "
 		end
-		puts "\nAlready Guessed: #{@incorrect_words.join(", ")}\n"
+		puts "\nIncorrect Letters: #{@incorrect_words.join(", ")}\n"
 	end
 
 	def update_board(letter)

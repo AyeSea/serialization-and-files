@@ -1,5 +1,5 @@
 class Player
-	attr_reader :name, :letter, :word
+	attr_accessor :name, :letter, :word
 
 	def initialize
 		create_name
